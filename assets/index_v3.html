@@ -48,6 +48,19 @@
 
     const sw = navigator.serviceWorker
 
+    const SITE_LIST = [
+      ['google', ''],
+      ['youtube', ''],
+      ['twitter', 'twitter.com'],
+      ['flickr', ''],
+      ['quora', 'www.quora.com/'],
+      ['twitch', 'www.twitch.tv/'],
+      ['reddit', ''],
+      ['wiki', 'wikipedia.org/'],
+      ['gist', 'gist.github.com/'],
+      ['facebook', 'facebook.com/'],
+      ['blogger', ''],
+    ]
 
     sw.addEventListener('message', onSwMsg)
     sendMsgToSw(PAGE_READY_CHECK)
@@ -108,20 +121,6 @@
       }
       ctl.postMessage([cmd, val])
     }
-
-    const SITE_LIST = [
-      ['google', ''],
-      ['youtube', ''],
-      ['twitter', 'twitter.com'],
-      ['flickr', ''],
-      ['quora', 'www.quora.com/'],
-      ['twitch', 'www.twitch.tv/'],
-      ['reddit', ''],
-      ['wiki', 'wikipedia.org/'],
-      ['gist', 'gist.github.com/'],
-      ['facebook', 'facebook.com/'],
-      ['blogger', ''],
-    ]
 
     function showIcons() {
       list.innerHTML = SITE_LIST.map(v => {
