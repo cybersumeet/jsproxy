@@ -95,7 +95,7 @@
         break
 
       case SW_READY:
-        console.log('sw ready')
+        console.log('SWR')
         showIcons()
         sendMsgToSw(PAGE_CONF_GET)
         break
@@ -132,6 +132,7 @@
       }).join('')
     }
 
+/*
     function addNodeItem(id, text) {
       const optEl = document.createElement('option')
       optEl.id = '--' + id
@@ -139,7 +140,8 @@
       optEl.value = id
       selNode.appendChild(optEl)
     }
-
+*/
+    
     function updateSelected() {
       const id = conf.node_default
       const item = document.getElementById('--' + id)
