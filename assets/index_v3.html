@@ -92,14 +92,14 @@
     function onSwFail(err) {
       txtURL.value = err
     }
-
+/*
     selNode.onchange = function() {
       const item = this.options[this.selectedIndex]
       const node = item.value
       conf.node_default = node
       sendMsgToSw(PAGE_CONF_SET, conf)
     }
-
+*/
     function sendMsgToSw(cmd, val) {
       const ctl = sw.controller
       if (!ctl) {
